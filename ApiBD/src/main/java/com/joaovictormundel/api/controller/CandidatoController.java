@@ -28,7 +28,20 @@ public class CandidatoController {
 
 	@PutMapping(value = "/{id}")
 	public ResponseEntity<CandidatoEntity> update(@PathVariable Integer id, @RequestBody CandidatoEntity cNew) {
-		return ResponseEntity.ok(repo.save(cNew));
+		CandidatoEntity candidato = repo.findById((long)id)
+				.orElse(null);
+		candidato.setNome(cNew.getNome());
+		candidato.setIdade(cNew.getIdade());
+		candidato.setNota(cNew.getNota());
+		candidato.setPartido(cNew.getPartido());
+		repo.save(candidato);
+		return ResponseEntity.ok(candidato);
+	}
+
+	@DeleteMapping(value = "/{id}")
+	public ResponseEntity<Void> deleteMapping(@PathVariable Integer id){
+		repo.deleteById((long)id);
+		return ResponseEntity.noContent().build();
 	}
 
 }

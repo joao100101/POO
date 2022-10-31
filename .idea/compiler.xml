@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Projeto5" />
+        <module name="Projeto4" />
+        <module name="Projeto3" />
+        <module name="ApiBD" />
+        <module name="Projeto2" />
+        <module name="Projeto1" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ApiBD" target="17" />
+      <module name="Projeto1" target="17" />
+      <module name="Projeto2" target="17" />
+      <module name="Projeto3" target="11" />
+      <module name="Projeto4" target="11" />
+      <module name="Projeto5" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="ApiBD" options="-parameters" />
+    </option>
+  </component>
+</project>
